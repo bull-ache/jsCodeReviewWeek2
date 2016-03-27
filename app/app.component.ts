@@ -3,6 +3,7 @@ import { FoodListComponent } from './food-list.component';
 import { Food } from './food.model';
 
 
+
 @Component({
   selector: 'my-app',
   directives: [FoodListComponent],
