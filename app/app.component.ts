@@ -29,5 +29,5 @@ export class AppComponent {
   }
   foodWasSelected(clickedFood: Food): void {
     console.log("parent", clickedFood.description, clickedFood.calories);
-}
+  }
 }
