@@ -1,3 +1,8 @@
 h1 {
   color: blue;
 }
+
+.task-form {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}

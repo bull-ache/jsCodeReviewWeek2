@@ -5,12 +5,14 @@ import {Food} from './food.model';
   selector: 'edit-food',
   inputs: ['food'],
   template: `
+
   <div class="food-form">
-    <h3>Edit Name: </h3>
+
+    <h2>Details (change to edit): </h2>
     <input [(ngModel)]="food.name" class="col-sm-8 input-lg food-form"/>
-    <h3>Edit description: </h3>
+    <h5>Description</h5>
     <input [(ngModel)]="food.description" class="col-sm-8 input-lg food-form"/>
-    <h3>Edit calories: </h3>
+    <h5>Calories</h5>
     <input [(ngModel)]="food.calories" class="col-sm-8 input-lg food-form"/>
   </div>
   `
