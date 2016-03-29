@@ -4,31 +4,33 @@ import { Food } from './food.model';
 import { EditFoodComponent } from './edit-food.component';
 import { NewFoodComponent } from './new-food.component';
 import { FoodPipe} from './food.pipe';
+import { ShowFoodDetailsComponent } from './show-food-details.component';
 
 @Component({
   selector: 'food-list',
   inputs: ['foodList'],
   outputs: ['onFoodSelect'],
   pipes: [FoodPipe],
-  directives: [FoodComponent, EditFoodComponent, NewFoodComponent],
+  directives: [FoodComponent, EditFoodComponent, NewFoodComponent, ShowFoodDetailsComponent],
   template: `
   <select (change)="onChange($event.target.value)">
     <option value="all" selected="selected" >Show All</option>
     <option value="low">Show Healthy Food</option>
     <option value="high">Show Unhealthy Food</option>
   </select>
-  <div class="display-container">
-    <food-display *ngFor="#currentFood of foodList | health:filterHealth"
-      (click)="foodClicked(currentFood)"
+  <div class="display-container" *ngFor="#currentFood of foodList | health:filterHealth">
+    <food-display (click)="foodClicked(currentFood)"
       [class.selected]="currentFood === selectedFood"
       [food]="currentFood">
     </food-display>
+    <show-food-details *ngIf="currentFood === selectedFood" [food]="selectedFood">
+    </show-food-details>
+    </div>
     <edit-food *ngIf="selectedFood" [food]="selectedFood">
     </edit-food>
     <new-food
       (onSubmitNewFood)="createFood($event)">
     </new-food>
-  </div>
   `
 })
 export class FoodListComponent {
