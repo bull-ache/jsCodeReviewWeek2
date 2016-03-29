@@ -9,11 +9,13 @@ import { Food } from './food.model';
   directives: [FoodListComponent],
   template: `
     <div class="container">
-      <h1>Food List</h1>
-      <food-list
-        [foodList]="foods"
-        (onFoodSelect)="foodWasSelected($event)">
-      </food-list>
+      <div class="jumbotron">
+        <h1>Food List</h1>
+      </div>
+        <food-list
+          [foodList]="foods"
+          (onFoodSelect)="foodWasSelected($event)">
+        </food-list>
     </div>
 
   `

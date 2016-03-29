@@ -1,8 +1,7 @@
-h1 {
+my-app {
   color: blue;
 }
 
-.task-form {
-  margin-top: 80px;
-  margin-bottom: 80px;
+.selected {
+  color: orange;
 }
