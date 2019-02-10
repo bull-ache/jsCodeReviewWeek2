@@ -6,7 +6,7 @@
 
 ## Description
 
-This web app is designed to allow a user to record their meals.
+An Angular app that allows users to track their meals.
 
 ## Setup/Installation Requirements
 
