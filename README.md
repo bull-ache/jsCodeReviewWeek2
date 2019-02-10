@@ -1,4 +1,4 @@
-# _GitHub API Code Review_
+# _Angular App_
 
 #### _Second Code Review for Epicodus's JS Class - 3.25.2016_
 
